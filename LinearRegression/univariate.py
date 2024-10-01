@@ -20,7 +20,7 @@ y_test = test_data[[output_param_name]].values
 num_iterations = 500
 alpha = 0.01
 
-linear_regression = LinearRegression(x_train, y_train)
+linear_regression = LinearRegression(x_train, y_train, polynomial_degree=4, sinusoid_degree=5)
 (theta, loss) = linear_regression.train(alpha, num_iterations)
 print('Theta: ', theta)
 print('start Loss: ', loss[0])
