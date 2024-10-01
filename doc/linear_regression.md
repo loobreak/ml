@@ -11,6 +11,9 @@ $J(\Theta) = \frac{1}{2m}\sum_{i=1} ^m(y^i - h_\theta(x^i))^2$
 $\frac{\partial J(\Theta)}{\partial \theta_j} = \frac{1}{m}\sum_{i=1} ^m(y^i - h_\theta(x^i))x_j^i$
 
 当存在多个特征时，且特征之间的量纲不同，需要对特征进行归一化处理，使得特征之间的量纲相同，这样可以加快梯度下降的收敛速度。
+<br>
+预处理数据时使用多项式拟合（升维），主要目的解决欠拟合问题，提高模型准确率；但是也会导致过拟合问题，需要使用正则化方法解决。
+<br>
 
 ### 批量梯度下降
 
@@ -35,3 +38,7 @@ $\theta_j = \theta_j - \alpha(y^i - h_\theta(x^i))x_j^i$
 $\theta_j = \theta_j - \alpha\frac{1}{b}\sum_{i=1} ^b(y^i - h_\theta(x^i))x_j^i$
 
 其中，$b$ 是小批量的大小，通常取 32、64 等值。
+
+# 代码备注
+
+polynomial_degree: 多项式拟合，升维度，曲线拟合
